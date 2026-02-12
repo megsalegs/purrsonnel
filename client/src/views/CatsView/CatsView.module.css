@@ -1,0 +1,478 @@
+.page {
+  background-color: #F8F2F4;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  background-color:#F8F2F4
+}
+
+.container h1 {
+  color: #241715;
+	font-size: 3rem;
+	margin-bottom: 0.5rem;
+	font-family: 'Georgia', serif;
+  text-align: center;
+}
+
+.catIcon {
+	color: #957186;
+	margin-right: 1rem;
+	animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+	0%, 100% { transform: translateY(0px); }
+	50% { transform: translateY(-10px); }
+}
+
+.loginPrompt {
+  padding: 1rem;
+  background-color: #957186;
+  border: 1px solid #402A2C;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  color: #241715;
+}
+
+.loginPrompt a {
+  color: #703D57;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.loginPrompt a:hover {
+  color: #402A2C;
+}
+
+.error {
+  color: #c62828;
+  padding: 1rem;
+  background-color: #ffebee;
+  border: 1px solid #ef5350;
+  border-radius: 8px;
+}
+
+.empty {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: #402A2C;
+  font-size: 1.1rem;
+}
+
+.staffActions {
+  margin: 1.5rem 0;
+  text-align: right;
+}
+
+.createButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.25rem;
+  background-color: #703D57;
+  color: #F8F2F4;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.createButton:hover {
+  background-color: #402A2C;
+  transform: translateY(-2px);
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 1.5rem;
+  background-color: #F8F2F4;
+  border-radius: 8px;
+  border: 1px solid #402A2C;
+}
+
+.searchForm {
+  display: flex;
+  gap: 0.5rem;
+  flex: 1;
+  max-width: 500px;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 0.75rem;
+  border: 2px solid #957186;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #ffffff;
+  color: #241715;
+  transition: border-color 0.2s;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #703D57;
+}
+
+.searchInput::placeholder {
+  color: #402A2C;
+  opacity: 0.6;
+}
+
+.searchButton {
+  padding: 0.75rem 1.25rem;
+  background-color: #703D57;
+  color: #F8F2F4;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s;
+  font-weight: 600;
+}
+
+.searchButton:hover {
+  background-color: #402A2C;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(112, 61, 87, 0.3);
+}
+
+.sortSelect {
+   padding: 0.75rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #402A2C;
+  background-color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: border 0.2s ease;
+}
+
+.sortSelect:hover {
+  border-color: #957186;
+}
+
+.sortSelect:focus {
+  outline: none;
+  border-color: #703D57;
+  box-shadow: 0 0 0 2px rgba(149, 113, 134, 0.2);
+}
+
+.viewToggle {
+  display: flex;
+  gap: 0.75rem;
+  background-color: #F8F2F4;
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+
+.viewIcon {
+  font-size: 1.5rem;
+  padding: 0.6rem;
+  cursor: pointer;
+  color: #402A2C;
+  border-radius: 6px;
+  transition: all 0.2s;
+  background-color: transparent;
+}
+
+.viewIcon:hover {
+  background-color: #957186;
+  color: #241715;
+  transform: scale(1.05);
+}
+
+.viewIcon:active {
+  background-color: #703D57;
+  color: #F8F2F4;
+  box-shadow: 0 2px 4px rgba(112, 61, 87, 0.3);
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 5px dashed #957186;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s;
+  background: linear-gradient(180deg, #F8F2F4 50%, #7D6772 100%);
+  box-shadow: 0 2px 4px rgba(36, 23, 21, 0.1);
+  position: relative;
+  border-radius: 14px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(36, 23, 21, 0.2);
+  transform: translateY(-4px);
+  border-color: #703D57;
+}
+
+.card:hover .cardImage img {
+  transform: scale(1.05);
+}
+
+.cardImage {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #F8F2F4 0%, #957186 100%);
+}
+
+.cardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.placeholderImage {
+  font-size: 5rem;
+  filter: drop-shadow(2px 2px 4px rgba(36, 23, 21, 0.2));
+}
+
+.cardContent {
+  padding: 1.25rem 1.25rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.cardContent h3 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin: 0;
+}
+
+.cardContent h3 a {
+  color: #402A2C;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.cardContent h3 a:hover {
+  color: #703D57;
+}
+
+.cardContent::before {
+  content: "";
+  height: 1px;
+  background: rgba(149, 113, 134, 0.5);
+  margin: 0.5rem 0;
+}
+
+.featuredBadge {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	background: linear-gradient(135deg, #957186 0%, #402A2C 100%);
+	color: #ffffff;
+	padding: 0.8rem 2rem;
+	border-radius: 20px;
+	font-weight: 700;
+	font-size: 1rem;
+	z-index: 10;
+	box-shadow: 0 2px 8px rgba(10, 9, 8, 0.3);
+  border: 3px solid #703D57;
+}
+
+.rank {
+  text-align: center;
+  color: #402A2C;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.catInfo {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #402A2C;
+}
+
+.skills {
+  font-size: 1.1rem;
+  text-align: center;
+  color: #F8F2F4;
+  background-color: #703D57;
+  border: 4px solid #402A2C;
+  padding: 0.5rem 0.75rem;
+  border-radius: 12px;
+}
+
+.description {
+  font-size: 1.3rem;
+  font-weight: 1000;
+  text-align: center;
+  color: #402A2C;
+  line-height: 1.5;
+}
+
+.bookmarkButton {
+  padding: 0.75rem;
+  background: linear-gradient(135deg, #703D57, #402A2C);
+  border-radius: 12px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: #F8F2F4;
+}
+
+.bookmarkButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(112, 61, 87, 0.35);
+}
+
+.bookmarkButton:active {
+  transform: translateY(0);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(36, 23, 21, 0.1);
+  border: 2px solid #957186;
+}
+
+.table thead {
+  background-color: #402A2C;
+  color: #F8F2F4;
+}
+
+.table th {
+  padding: 1.25rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.table td {
+  padding: 1.25rem 1rem;
+  border-bottom: 1px solid #957186;
+  color: #241715;
+}
+
+.table tbody tr {
+  transition: background-color 0.2s;
+}
+
+.table tbody tr:hover {
+  background-color: #F8F2F4;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table a {
+  color: #703D57;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.table a:hover {
+  color: #402A2C;
+  text-decoration: underline;
+}
+
+.tableButton {
+  padding: 0.5rem 1rem;
+  background-color: #703D57;
+  color: #F8F2F4;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.tableButton:hover {
+  background-color: #402A2C;
+  transform: scale(1.05);
+}
+
+.footer {
+	background-color: #402A2C;
+	color: #F8F2F4;
+	padding: 0.5rem 1.5rem;
+	border-top: 3px solid #957186;
+}
+
+.footer p {
+	margin: 0;
+	color: #F8F2F4;
+}
+
+@media only screen and (max-width: 425px) {
+  .container {
+    padding: 1rem 0.75rem;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem;
+  }
+
+  .searchForm {
+    max-width: 100%;
+  }
+
+  .viewToggle {
+    justify-content: center;
+  }
+
+  .cardGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .cardContent {
+    padding: 1rem;
+  }
+
+  .cardContent h3 {
+    font-size: 1.4rem;
+  }
+
+  .skills,
+  .description {
+    font-size: 0.95rem;
+  }
+
+  .cardImage {
+    height: 180px;
+  }
+
+  .bookmarkButton {
+    width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}

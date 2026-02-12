@@ -1,0 +1,292 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #F8F2F4 0%, #7D6772 100%);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  flex: 1;
+}
+
+.section {
+   border: 5px dashed #957186;
+  border-radius: 12px;
+  transition: all 0.3s;
+  background-color: #F8F2F4;
+  box-shadow: 0 2px 4px rgba(36, 23, 21, 0.1);
+  border-radius: 14px;
+  padding: 1.5rem;
+}
+
+
+
+.backLink {
+  font-size: 1rem;
+  padding: 0.5rem 1.5rem;
+  color: #703D57;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid #703D57;
+  border-radius: 12px;
+}
+
+.header {
+  padding: 1.6rem 0;
+  text-align: center;
+}
+
+.header h1 {
+  color: #402A2C;
+  font-size: 2.5rem;
+  margin: 0;
+  font-family: 'Georgia', serif;
+  border-bottom: 3px solid #957186;
+  margin-bottom: auto;
+  padding-bottom: 0.75rem;
+}
+
+.backLink:hover {
+  color: #402A2C; 
+  text-decoration: underline;
+}
+
+.mainContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 
+    "form form form"
+    "photos photos photos";
+  gap: 1rem;
+}
+
+.section h2 {
+  color: #402A2C; 
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  margin-top: 0;
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem;
+  color: #402A2C;
+  font-size: 1.1rem;
+}
+
+.error {
+  padding: 1rem;
+  background-color: #FFEBEE;
+  color: #C62828;
+  border: 2px solid #EF5350;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.success {
+  padding: 1rem;
+  background-color: #DCE7E1;
+  color: #241715;
+  border: 2px solid #703D57;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.formSection {
+  grid-area: form;
+}
+
+.form {
+  display: grid;
+  margin-top: 1rem;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  color: #402A2C; 
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.formGroup input {
+  width: 95%;
+  padding: 0.75rem;
+  border: 2px solid #957186; 
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #241715;
+  transition: border-color 0.2s;
+}
+
+.formGroup input:focus {
+  outline: none;
+  border-color: #703D57; 
+  box-shadow: 0 0 0 3px rgba(112, 61, 87, 0.1);
+}
+
+.checkboxGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.checkboxGroup input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.checkboxGroup label {
+  color: #402A2C;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.submitBtn {
+  margin: auto;
+  padding: 0.875rem 2rem;
+  background: linear-gradient(180deg, #957186 0%, #402A2C 100%);
+	color: #F8F2F4;
+	text-align: center;
+	border-radius: 12px;
+	font-weight: 700;
+	font-size: 1rem;
+	transition: all 0.2s;
+	text-decoration: none;
+  font-family: "Georgia", serif;
+}
+
+.submitBtn:hover {
+  background-color: #402A2C;
+	transform: translateY(-3px);
+	box-shadow: 0 4px 8px rgba(112, 61, 87, 0.3);
+}
+
+.photosSection {
+  grid-area: photos;
+  margin-top: 2rem;
+}
+
+
+.empty {
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: #FFFFFF;
+  border: 2px dashed #957186;
+  border-radius: 12px;
+  color: #402A2C;
+  font-size: 1.1rem;
+}
+
+.photoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.photoCard {
+  background-color: #FFFFFF;
+  border: 2px solid #957186; 
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s;
+  box-shadow: 0 2px 4px rgba(36, 23, 21, 0.1);
+}
+
+.photoCard:hover {
+  box-shadow: 0 6px 12px rgba(36, 23, 21, 0.15);
+  border-color: #703D57; 
+}
+
+.photoWrapper {
+  position: relative;
+  height: 200px;
+  background: linear-gradient(135deg, #F8F2F4 0%, #957186 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photoWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.primaryBadge {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background-color: #703D57;
+  color: #F8F2F4;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  box-shadow: 0 2px 4px rgba(36, 23, 21, 0.2);
+}
+
+.deleteBtn {
+  width: 100%;
+  padding: 0.75rem;
+  background: linear-gradient(180deg, #957186 0%, #402A2C 100%);
+	color: #F8F2F4;
+	text-align: center;
+	font-weight: 700;
+	font-size: 1rem;
+	transition: all 0.2s;
+	text-decoration: none;
+  font-family: "Georgia", serif;
+}
+
+.deleteBtn:hover {
+  background-color: #A61D1D;
+}
+
+.footer {
+  background-color: #402A2C;
+  color: #F8F2F4;
+  padding: 0.5rem 1.5rem;
+  border-top: 3px solid #957186;
+}
+
+.footer p {
+  margin: 0;
+  color: #F8F2F4;
+}
+
+@media only screen and (max-width: 425px) {
+  .container {
+    padding: 1rem 0.75rem;
+  }
+
+  .container h1 {
+    font-size: 1.75rem;
+  }
+
+  .form {
+    width: 90%;
+  }
+
+  .formSection {
+    padding: 1.25rem;
+  }
+
+  .photoGrid {
+    grid-template-columns: 1fr;
+  }
+}

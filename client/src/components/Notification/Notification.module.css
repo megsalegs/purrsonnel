@@ -1,0 +1,50 @@
+.notifications {
+  margin-bottom: 1rem;
+  max-width: 750px;
+}
+
+.alert {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-width: 1px;
+  border-style: solid;
+  padding: 0.5rem;
+}
+
+.info {
+  color: #402A2C;
+  background-color: #F8F2F4;
+  border-color: #957186;
+}
+
+.error {
+  color: #C62828;
+  background-color: #FFEBEE;
+  border-color: #EF5350;
+}
+
+.success {
+  color: #241715;
+  background-color: #DCE7E1;
+  border-color: #703D57;
+}
+
+.warning {
+  color: #402A2C;
+  background-color: #F8F2F4;
+  border-color: #7D6772;
+}
+
+.message {
+  margin-right: 1rem;
+}
+
+.icon-button {
+  background-color: transparent;
+  border: none;
+  font-size: inherit;
+  padding: 0;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}

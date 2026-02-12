@@ -1,0 +1,121 @@
+.page {
+  background-color: #F8F2F4;
+}
+
+.container {
+  flex: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  background-color: #F8F2F4;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.container h1 {
+  color: #703D57;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+  font-family: 'Georgia', serif;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  border: 3px dashed #957186;
+  border-radius: 12px;
+  padding: 1.25rem;
+  background: linear-gradient(180deg, #F8F2F4 60%, #7D6772 100%);
+}
+
+.card h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.5rem;
+  color:#402A2C;
+}
+
+.card p {
+  font-size: 1.5rem;
+  color:#402A2C;
+}
+
+.card:hover {
+  border-color: #703D57;
+  box-shadow: 0 6px 12px rgba(36, 23, 21, 0.15);
+}
+
+.statusBadge {
+  display: inline-block;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 1rem 2.5rem;
+  background-color: #402A2C;
+  color: #F8F2F4;
+  border: none;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: "Georgia", serif;
+
+}
+
+.cancelBtn {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 1rem 2.5rem;
+  background-color: #703D57;
+  color: #F8F2F4;
+  border: none;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: "Georgia", serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cancelBtn:hover {
+  background-color: #402A2C;
+  transform: translateY(-2px);
+}
+
+.cancelBtn:disabled {
+  background-color: #957186;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.shieldCat {
+  color: #957186;
+  margin-right: 1rem;
+  animation: float 2s ease-in-out infinite;
+}
+
+.image {
+  width: 220px;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 3px solid #703D57;
+}
+
+.placeholder {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  background: #f3f3f3;
+  border-radius: 8px;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}

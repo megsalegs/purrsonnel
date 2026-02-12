@@ -1,0 +1,268 @@
+.page {
+	background-color: #F8F2F4;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 2rem 1.5rem;
+	background-color: #F8F2F4;
+	min-height: 100vh;
+}
+
+.header {
+	text-align: center;
+	margin-bottom: 3rem;
+}
+
+.header h1 {
+	color: #241715;
+	font-size: 3rem;
+	margin-bottom: 0.5rem;
+	font-family: 'Georgia', serif;
+}
+
+
+
+.crownIcon {
+	color: #957186;
+	margin-right: 1rem;
+	
+	animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+	0%, 100% { transform: translateY(0px); }
+	50% { transform: translateY(-10px); }
+}
+
+.subtitle {
+	color: #402A2C;
+	font-size: 1.2rem;
+	font-style: italic;
+}
+
+.loading {
+	text-align: center;
+	padding: 3rem;
+	color: #402A2C;
+	font-size: 1.1rem;
+}
+
+.error {
+	color: #c62828;
+	background-color: #ffebee;
+	padding: 1rem;
+	border-radius: 8px;
+	border: 2px solid #ef5350;
+	margin-top: 2rem;
+}
+
+.empty {
+	text-align: center;
+	padding: 4rem 2rem;
+	background-color: #ffffff;
+	border: 3px dashed #957186;
+	border-radius: 16px;
+	margin-top: 2rem;
+}
+
+.emptyIcon {
+	font-size: 5rem;
+	display: block;
+	margin-bottom: 1rem;
+}
+
+.empty p {
+	color: #402A2C;
+	font-size: 1.2rem;
+	margin-bottom: 1.5rem;
+}
+
+.browseLink {
+	display: inline-block;
+	padding: 1rem 2rem;
+	background-color: #703D57;
+	color: #F8F2F4;
+	text-decoration: none;
+	border-radius: 8px;
+	font-weight: 600;
+	transition: all 0.3s;
+}
+
+.browseLink:hover {
+	background-color: #402A2C;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 8px rgba(112, 61, 87, 0.3);
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+	gap: 2rem;
+	margin-top: 2rem;
+}
+
+.card {
+	background: linear-gradient(180deg, #F8F2F4 75%, #7D6772 100%);
+	border: 3px dashed #957186;
+	border-radius: 16px;
+	overflow: hidden;
+	transition: all 0.3s;
+	box-shadow: 0 4px 8px rgba(36, 23, 21, 0.1);
+	position: relative;
+}
+
+.card:hover {
+	transform: translateY(-6px) scale(1.02);
+	box-shadow: 0 12px 24px rgba(36, 23, 21, 0.2);
+	border-color: #703D57;
+}
+
+.featuredBadge {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	background: linear-gradient(135deg, #957186 25%, #402A2C 100%);
+	color: #ffffff;
+	padding: 0.8rem 2rem;
+	border-radius: 20px;
+	font-weight: 700;
+	font-size: 1rem;
+	z-index: 10;
+	box-shadow: 0 2px 8px rgba(10, 9, 8, 0.3);
+	border: 3px solid #703D57;
+}
+
+.cardImage {
+	height: 250px;
+	background: linear-gradient(135deg, #F8F2F4 0%, #957186 100%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	position: relative;
+}
+
+.cardImage::before {
+	content: '⭐';
+	position: absolute;
+	font-size: 8rem;
+	opacity: 0.1;
+	animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
+
+.cardImage img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.placeholder {
+	font-size: 6rem;
+	animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+	0%, 100% { transform: scale(1); }
+	50% { transform: scale(1.1); }
+}
+
+.cardContent {
+	padding: 1.5rem;
+}
+
+.cardContent h3 {
+	margin: 0 0 1rem 0;
+	font-size: 2rem;
+	text-align: center;
+}
+
+.cardContent h3 a {
+	color: #402A2C;
+	text-decoration: none;
+	transition: color 0.2s;
+}
+
+.cardContent h3 a:hover {
+	color: #703D57;
+}
+
+.rankScore {
+	display: inline-block;
+	background-color: #703D57;
+	color: #F8F2F4;
+	padding: 0.5rem 1rem;
+	border-radius: 20px;
+	font-weight: 600;
+	font-size: 0.9rem;
+	margin-bottom: 1rem;
+}
+
+.skills {
+	color: #402A2C;
+	font-size: 1.2rem;
+	line-height: 1;
+	margin-bottom: 1.25rem;
+	text-align: center;
+}
+
+.viewBtn {
+	display: inline-block;
+	margin: 0 auto;
+	padding: 1rem 7.5rem;
+	background: linear-gradient(180deg, #957186 0%, #402A2C 100%);
+	color: #F8F2F4;
+	text-align: center;
+	border-radius: 12px;
+	font-weight: 700;
+	font-size: 1rem;
+	transition: all 0.2s;
+	text-decoration: none;
+}
+
+.viewBtn:hover {
+	background-color: #402A2C;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 8px rgba(112, 61, 87, 0.3);
+}
+
+.footer {
+	background-color: #402A2C;
+	color: #F8F2F4;
+	padding: 0.5rem 1.5rem;
+	border-top: 3px solid #957186;
+}
+
+.footer p {
+	margin: 0;
+	color: #F8F2F4;
+}
+
+@media only screen and (max-width: 425px) {
+	.container {
+		padding: 1rem 0.75rem;
+	}
+
+	.header h1 {
+		font-size: 2rem;
+	}
+
+	.subtitle {
+		font-size: 1rem;
+	}
+
+	.grid {
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+	}
+
+	.cardImage {
+		height: 200px;
+	}
+}

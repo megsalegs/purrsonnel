@@ -1,0 +1,93 @@
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+ 	border: 5px dashed #957186;
+	border-radius: 12px;
+	overflow: hidden;
+	transition: all 0.3s;
+	background: linear-gradient(180deg, #F8F2F4 50%, #7D6772 100%);
+	box-shadow: 0 2px 4px rgba(36, 23, 21, 0.1);
+	border-radius: 14px;
+}
+
+
+
+.card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 8px 16px rgba(36, 23, 21, 0.2);
+	border-color: #703D57;
+}
+
+.cardImage {
+	height: 250px;
+	background: linear-gradient(135deg, #F8F2F4 0%, #957186 100%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.cardImage img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.placeholder {
+	font-size: 5rem;
+}
+
+.cardContent {
+	padding: 1.25rem 1.25rem 1.25rem 1.25rem;
+}
+
+.cardContent h3 {
+	display: flex;
+	justify-content: center;
+	margin-top: 0;
+	font-size: 2rem;
+	text-align: center;
+}
+
+.cardContent h3 a {
+	color: #402A2C;
+	text-decoration: none;
+	transition: color 0.2s;
+}
+
+.cardContent h3 a:hover {
+	color: #703D57;
+}
+
+.skills {
+	color: #402A2C;
+	font-size: 1.5rem;
+	text-align: center;
+	font-family: "Georgia", serif;
+	margin-bottom: 1.8rem;
+}
+
+.removeBtn {
+	width: 100%;
+	padding: 0.75rem;
+	margin-bottom: 0.3rem;
+	background: linear-gradient(135deg, #703D57, #402A2C);
+	border-radius: 12px;
+	font-weight: 700;
+	letter-spacing: 0.3px;
+	color: #F8F2F4;
+	font-weight: 500;
+	font-size: 1.3rem;
+	font-family: "Georgia", serif;
+	cursor: pointer;
+	transition: all 0.2s;
+}
+
+
+  
+
+.removeBtn:hover {
+	transform: translateY(-4px);
+}
