@@ -121,7 +121,8 @@ Built as a capstone project, Purrsonnel demonstrates production-style backend de
 - Dynamic image handling (local + external URLs)
 
 # Screenshots
-   - Landing Page
+   # Landing Page
+   /
      - Responsive React interface consuming RESTful Spring Boot endpoints.
      - Navigation and conditional rendering reflect authentication state managed via JWT.
 - <img width="1623" height="969" alt="Screenshot 2026-02-13 at 5 15 47 PM" src="https://github.com/user-attachments/assets/041a3c85-7919-4434-951b-d097e0fd8057" />
@@ -130,7 +131,8 @@ Built as a capstone project, Purrsonnel demonstrates production-style backend de
 - <img width="1657" height="1042" alt="Screenshot 2026-02-13 at 5 20 18 PM" src="https://github.com/user-attachments/assets/793e919f-1596-4f2c-be87-5bcd4cb3ca4a" />
     - Note: Paw animation continues; footer cat heads bounce; "Sign In" button renders transparent when unauthenticated and restores opacity with transform on hover.
 
-  - Cat Details View
+    # Cat Details View
+  /
       - Dynamic profile view backed by relational joins across cats, reviews, images, and prior experience tables.           - Aggregate SQL queries compute average rating and ranking score in real time.
    - This signals:
       - JOIN operations
@@ -139,7 +141,8 @@ Built as a capstone project, Purrsonnel demonstrates production-style backend de
     - Note: Profile images expand on hover; reviews collapse after two entries; staff view includes moderation action 
      buttons.
      
-  - Hire Requests Dashboard -  Staff
+# Hire Requests Dashboard -  Staff
+/
       - Authenticated user dashboard displaying hire request lifecycle states (pending, approved, denied). 
       - Data retrieved through protected endpoints with role-based authorization enforced via Spring Security.
    - This signals:
@@ -148,7 +151,8 @@ Built as a capstone project, Purrsonnel demonstrates production-style backend de
       - Business logic
 - <img width="983" height="1053" alt="Screenshot 2026-02-13 at 5 33 43 PM" src="https://github.com/user-attachments/assets/17dd46a6-be31-4628-bbde-951ad3ceefa9" />
 
- - My Hire Requests
+ # My Hire Requests 
+ /
       - Authenticated dashboard displaying user-scoped hire requests and lifecycle states (pending, approved, denied).
       - Endpoints filter data serverside based on the authenticated principal and enforce role-based access control. 
       - Status transitions reflect transactional backend logic and constraint-validated relationships between users 
@@ -161,7 +165,8 @@ Built as a capstone project, Purrsonnel demonstrates production-style backend de
      - Note: Sliding paw animations reappear with staggered timing; status badges render conditionally; date ranges 
      formatted client-side; cancelled requests excluded via backend filtering.
 
- - Manage Photos (staff):
+ # Manage Photos (staff):
+ /
       - Role-restricted administrative interface for managing cat image records.
       - Backend validation enforces referential integrity and single-primary-image constraints per listing.
    - This signals:
