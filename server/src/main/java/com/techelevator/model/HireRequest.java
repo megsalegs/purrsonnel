@@ -17,6 +17,9 @@ public class HireRequest {
     private Integer catId;
 
     private Integer requestedBy;
+    private String requesterUsername;
+    private String requesterName;
+
 
     //pending, approved, declined, cancelled, completed
     private String status;
@@ -81,6 +84,23 @@ public class HireRequest {
     public void setRequestedBy(Integer requestedBy) {
         this.requestedBy = requestedBy;
     }
+
+    public String getRequesterUsername() {
+        return requesterUsername;
+    }
+
+    public void setRequesterUsername(String requesterUsername) {
+        this.requesterUsername = requesterUsername;
+    }
+
+    public String getRequesterName() {
+        return requesterName;
+    }
+
+    public void setRequesterName(String requesterName) {
+        this.requesterName = requesterName;
+    }
+
 
     public String getStatus() {
         return status;

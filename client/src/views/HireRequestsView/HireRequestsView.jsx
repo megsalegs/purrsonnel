@@ -1,6 +1,6 @@
 import { useEffect, useState, useContext } from 'react';
 import { UserContext } from '../../context/UserContext';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import HireRequestService from '../../services/HireRequestService';
 import styles from './HireRequestsView.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -84,12 +84,14 @@ function denyHire(hireRequestId) {
           <p className={styles.empty}>You haven’t requested any hires yet.</p>
         ) : (
           <ul className={styles.list}>
-            {hires.map(h => (
+            {hires
+            .filter(h => h.status !== 'CANCELLED')
+            .map(h => (
               <li key={h.hireRequestId} className={styles.card}>
 
               
-                <div className={styles.header}>
-                  <Link to={`/cats/${h.catId}`} className={styles.imageWrap}>
+                <div className={styles.left}>
+                  <NavLink to={`/cats/${h.catId}`} className={styles.imageWrap}>
                     {h.primaryImagePath ? (
                       <img
                       className={styles.image}
@@ -103,27 +105,33 @@ function denyHire(hireRequestId) {
                     ) : (
                       <div className={styles.placeholder}>🐱</div>
                     )}
-
-                  </Link>
-
-
-                  <div className={styles.meta}>
+                  </NavLink>
                     <h3>
-                      <Link to={`/cats/${h.catId}`}>{h.catName}</Link>
+                      <NavLink to={`/cats/${h.catId}`} className={styles.nameLink}>{h.catName}</NavLink>
                     </h3>
+                </div>
+
+
+                  <div className={styles.center}>
+                    
+                    
+                    <p className={styles.requestedBy}>
+                      Requested By: <br /> {h.requesterUsername}
+                    </p>
+
                     <span className={`${styles.statusBadge} ${styles[h.status?.toLowerCase()]}`}>
                       {h.status}
                     </span>
                   </div>
-                </div>
+                
 
               
-                <div className={styles.row}>
-                  <span className={styles.label}>Dates: {" "}
+                <div className={styles.right}>
+                  <span className={styles.dates}>Dates: {" "}
                   
                     {formateDate(h.requestedStartDate)} → {formateDate(h.requestedEndDate)}
                   </span>
-                </div>
+                
 
              
                 {h.status === 'PENDING' && (
@@ -143,7 +151,7 @@ function denyHire(hireRequestId) {
                   </button>
                  </div>
                 )}
-
+              </div>
               </li>
             ))}
           </ul>

@@ -59,6 +59,7 @@ public List<HireRequest> getAll() {
             c.name AS cat_name,
             ci.file_path AS primary_image_path,
             hr.requested_by,
+            u.username,
             hr.status,
             hr.requested_start_date,
             hr.requested_end_date,
@@ -66,8 +67,10 @@ public List<HireRequest> getAll() {
         FROM hire_request hr
         JOIN cat c ON hr.cat_id = c.cat_id
         LEFT JOIN cat_image ci
-            ON ci.cat_id = c.cat_id
-           AND ci.is_primary = true
+        ON ci.cat_id = c.cat_id
+            AND ci.is_primary = true
+        LEFT JOIN users u
+            ON hr.requested_by = u.user_id
         ORDER BY hr.created_at DESC;
         """;
 
@@ -187,6 +190,7 @@ private HireRequest mapRowToHireRequest(SqlRowSet rs) {
     hr.setStatus(rs.getString("status"));
     hr.setCatName(rs.getString("cat_name"));
     hr.setPrimaryImagePath(rs.getString("primary_image_path"));
+    hr.setRequesterUsername(rs.getString("username"));
 
     if (rs.getDate("requested_start_date") != null) {
         hr.setRequestedStartDate(rs.getDate("requested_start_date").toLocalDate());
