@@ -7,7 +7,6 @@ import com.techelevator.exception.DaoException;
 import com.techelevator.model.Cat;
 import com.techelevator.model.User;
 import jakarta.validation.constraints.Positive;
-import org.apache.catalina.LifecycleState;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;

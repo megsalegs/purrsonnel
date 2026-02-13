@@ -1,6 +1,5 @@
 package com.techelevator.controller;
 import com.techelevator.dao.UserDao;
-import com.techelevator.exception.DaoException;
 import com.techelevator.model.Review;
 import com.techelevator.model.User;
 import jakarta.validation.Valid;

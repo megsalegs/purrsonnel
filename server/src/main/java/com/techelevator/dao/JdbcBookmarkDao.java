@@ -24,16 +24,16 @@ public List<Cat> getBookmarkedCatsByUserId(int userId) {
     List<Cat> cats = new ArrayList<>();
 
       String sql = """
-    SELECT
-    c.cat_id,
-    c.created_by,
-    c.name,
-    c.age,
-    c.color,
-    c.fur_length,
-    c.skills,
-    c.description,
-    c.featured,
+        SELECT
+        c.cat_id,
+        c.created_by,
+        c.name,
+        c.age,
+        c.color,
+        c.fur_length,
+        c.skills,
+        c.description,
+        c.featured,
     (
         SELECT AVG(r.rating)::INT
         FROM review r
@@ -41,15 +41,15 @@ public List<Cat> getBookmarkedCatsByUserId(int userId) {
     ) AS rank_score,
     c.is_active,
     ci.file_path AS primary_image_path
-FROM user_bookmark ub
-JOIN cat c
-    ON ub.cat_id = c.cat_id
-LEFT JOIN cat_image ci
-    ON ci.cat_id = c.cat_id
-   AND ci.is_primary = true
-WHERE ub.user_id = ?
-ORDER BY c.name;
-""";
+        FROM user_bookmark ub
+        JOIN cat c
+            ON ub.cat_id = c.cat_id
+        LEFT JOIN cat_image ci
+            ON ci.cat_id = c.cat_id
+        AND ci.is_primary = true
+        WHERE ub.user_id = ?
+        ORDER BY c.name;
+        """;
 
     SqlRowSet rs = jdbcTemplate.queryForRowSet(sql, userId);
     while (rs.next()) {

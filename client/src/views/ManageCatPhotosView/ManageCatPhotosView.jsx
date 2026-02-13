@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import CatImageService from '../../services/CatImageService';
 import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner';
@@ -16,19 +16,26 @@ export default function ManageCatPhotosView() {
     isPrimary: false
   });
 
-  function loadImages() {
+  const loadImages = useCallback(() => {
     setIsLoading(true);
     setErrorMsg('');
-
+  
     CatImageService.getByCatId(catId)
       .then(res => setImages(res.data))
-      .catch(err => setErrorMsg(err?.response?.data?.message || 'Unable to load photos'))
+      .catch(err =>
+        setErrorMsg(
+          err?.response?.data?.message || 'Unable to load photos'
+        )
+      )
       .finally(() => setIsLoading(false));
-  }
-
+  }, [catId]);
+  
   useEffect(() => {
     loadImages();
-  }, [catId]);
+  }, [loadImages]);
+
+
+
 
 function handleAddPhoto(e) {
   e.preventDefault();
