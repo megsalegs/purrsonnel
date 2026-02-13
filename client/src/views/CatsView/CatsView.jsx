@@ -313,9 +313,7 @@ return (
 		)}
 	</div>
 	
-	<footer className={styles.footer}>
-			&copy; Purrsonnel
-	</footer>
+
 	
 	</div>
 );

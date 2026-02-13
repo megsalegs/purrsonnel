@@ -120,9 +120,7 @@ export default function ManageReviewsView() {
 			</div>
 		))}
 	</div>
-	<footer className={styles.footer}>
-		&copy; Purrsonnel
-	</footer>
+
 	</div>
 	);
 }

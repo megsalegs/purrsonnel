@@ -626,13 +626,7 @@
   cursor: not-allowed;
 }
 
-.footer {
-  background-color: #402A2C;
-  color: #F8F2F4;
-  padding: 1rem;
-  border-top: 3px solid #957186;
-  text-align: center;
-}
+
 
 @media (max-width: 425px) {
   .mainContent {

@@ -97,6 +97,7 @@ public List<HireRequest> getAll() {
           c.name AS cat_name,
           ci.file_path AS primary_image_path,
           hr.requested_by,
+          u.username,
           hr.status,
           hr.requested_start_date,
           hr.requested_end_date
@@ -105,6 +106,8 @@ public List<HireRequest> getAll() {
         LEFT JOIN cat_image ci
           ON c.cat_id = ci.cat_id
          AND ci.is_primary = true
+        LEFT JOIN users u 
+            ON hr.requested_by = u.user_id
         WHERE hr.requested_by = ?
         ORDER BY hr.hire_request_id DESC;
         """;
@@ -125,21 +128,20 @@ public List<HireRequest> getAll() {
 @Override
 public HireRequest getHireRequestById(int hireRequestId) {
     String sql = """
-        SELECT
-            hr.hire_request_id,
+        SELECT hr.hire_request_id,
             hr.cat_id,
-            c.name AS cat_name,
-            ci.file_path AS primary_image_path,
             hr.requested_by,
             hr.status,
             hr.requested_start_date,
             hr.requested_end_date,
-            hr.created_at
+            c.name AS cat_name,
+            ci.file_path AS primary_image_path,
+            u.username
         FROM hire_request hr
         JOIN cat c ON hr.cat_id = c.cat_id
-        LEFT JOIN cat_image ci
-            ON ci.cat_id = c.cat_id
-           AND ci.is_primary = true
+        LEFT JOIN cat_image ci 
+            ON c.cat_id = ci.cat_id AND ci.is_primary = true
+        JOIN users u ON hr.requested_by = u.user_id
         WHERE hr.hire_request_id = ?;
         """;
 

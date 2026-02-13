@@ -1,6 +1,6 @@
 import { useEffect, useState, useContext } from 'react';
 import { UserContext } from '../../context/UserContext';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import HireRequestService from '../../services/HireRequestService';
 import styles from './HireRequestsView.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -158,9 +158,7 @@ function denyHire(hireRequestId) {
         )}
       </div>
 
-      <footer className={styles.footer}>
-        &copy; Purrsonnel
-      </footer>
+      
     </div>
   );
 }

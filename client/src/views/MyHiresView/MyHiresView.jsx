@@ -34,6 +34,19 @@ export default function MyHiresView() {
 
   return (
     <div className={styles.page}>
+      <section className={styles.pawSwat}>
+        <div className={styles.pawWrapper}>
+            <div className={styles.paw}>
+              <img src="/favicon-catPaw.ico" alt="animated paw" />
+            </div>
+          </div>
+        <div className={styles.pawWrapper2}>
+            <div className={styles.paw2}>
+              <img src="/favicon-catPaw2.ico" alt="animated paw" />
+            </div>
+        </div>
+      </section>
+      
     <div className={styles.container}>
       <h1>
           <FontAwesomeIcon icon="shield-cat" className={styles.shieldCat} />
@@ -81,6 +94,8 @@ export default function MyHiresView() {
         ))}
       </ul>
     </div>
+  
     </div>
+    
   );
 }

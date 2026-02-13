@@ -82,9 +82,6 @@ export default function BookmarksView() {
       )}
     </div>
     </div>
-    <footer className={styles.footer}>
-				&copy; Purrsonnel
-			</footer>
     </div>
      );
 }

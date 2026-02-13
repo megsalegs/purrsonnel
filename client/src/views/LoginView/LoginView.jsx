@@ -79,14 +79,12 @@ export default function LoginView() {
         <hr />
 
         <p>
-          Don't have an account? <Link to="/register">Create one!</Link>
+          Don&apos;t have an account? <Link to="/register">Create one!</Link>
         </p>
       </form>
     </div>
     </div>
-    <footer className={styles.footer}>
-				&copy; Purrsonnel
-    </footer>
+ 
   </div>
   );
 }

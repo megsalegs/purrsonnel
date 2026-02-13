@@ -12,7 +12,8 @@
 .container h1 {
   color: #241715;
 	font-size: 3rem;
-	margin-bottom: 0.5rem;
+	margin-bottom: 1.5rem;
+  margin-top: 0;
 	font-family: 'Georgia', serif;
   text-align: center;
 }
@@ -408,17 +409,7 @@
   transform: scale(1.05);
 }
 
-.footer {
-	background-color: #402A2C;
-	color: #F8F2F4;
-	padding: 0.5rem 1.5rem;
-	border-top: 3px solid #957186;
-}
 
-.footer p {
-	margin: 0;
-	color: #F8F2F4;
-}
 
 @media only screen and (max-width: 425px) {
   .container {

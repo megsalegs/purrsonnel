@@ -522,9 +522,6 @@ function handleDelete() {
     </div>
   </div>
 
-      <footer className={styles.footer}>
-				&copy; Purrsonnel
-			</footer>
     
   </>
 );

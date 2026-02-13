@@ -180,9 +180,7 @@ function handleAddPhoto(e) {
       </section>
     </div>
     </div>
-    <footer className={styles.footer}>
-				&copy; Purrsonnel
-    </footer>
+  
   </div>
   </>
   );

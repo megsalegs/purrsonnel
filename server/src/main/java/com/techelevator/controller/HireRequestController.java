@@ -42,9 +42,10 @@ public class HireRequestController {
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
     public HireRequest create(@Valid @RequestBody HireRequest hireRequest, Principal principal) {
-        int userId = getUserIdFromPrincipal(principal);
-        hireRequest.setRequestedBy(userId); // ← ADD THIS
-        return hireRequestService.createRequest(hireRequest, userId);
+        hireRequest.setRequestedBy(userDao.getUserByUsername(principal.getName()).getId());
+        hireRequest.setStatus("PENDING");
+ 
+        return hireRequestDao.createHireRequest(hireRequest);    
     }
 
 

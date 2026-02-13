@@ -115,7 +115,7 @@ export default function LandingPage() {
 						</div>
 						<h3>Verified Reviews</h3>
 						<p>
-							Read authentic reviews from real employers. Every cat's performance is rated and documented
+							Read authentic reviews from real employers. Every cat&apos;s performance is rated and documented
 							for transparency.
 						</p>
 					</div>
@@ -157,9 +157,7 @@ export default function LandingPage() {
 				</div>
 			</section>
 
-			<footer className={styles.footer}>
-				&copy; Purrsonnel
-			</footer>
+		
 		</div>
 	);
 }

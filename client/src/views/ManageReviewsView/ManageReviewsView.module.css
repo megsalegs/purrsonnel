@@ -191,13 +191,7 @@
   margin-bottom: 1rem;
 }
 
-.footer {
-  background-color: #402A2C;
-  color: #F8F2F4;
-  padding: 0.5rem 1.5rem;
-  border-top: 3px solid #957186;
-  text-align: center;
-}
+
 
 @media only screen and (max-width: 425px) {
   .container h1 {

@@ -160,9 +160,7 @@ export default function RegisterView() {
       </form>
     </div>
     </div>
-    <footer className={styles.footer}>
-				&copy; Purrsonnel
-    </footer>
+  
   </div>
   
   );

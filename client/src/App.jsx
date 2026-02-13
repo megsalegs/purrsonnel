@@ -20,6 +20,8 @@ import LandingPage from './views/LandingPage/LandingPage';
 import MyHiresView from './views/MyHiresView/MyHiresView';
 import CreateCatView from './views/CreateCatView/CreateCatView';
 import EditCatView from './views/EditCatView/EditCatView';
+import Footer from './components/Footer/Footer';
+
 
 
 export default function App() {
@@ -106,6 +108,7 @@ export default function App() {
           <Route path="*" element={<Navigate to="/cats" replace />} />
         </Routes>
         </main>
+        <Footer />
     </div>
   );
 }
